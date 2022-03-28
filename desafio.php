@@ -8,10 +8,10 @@ $contador = 0;
 while ($contador < 21){
     $numeroArray = $array[$contador];
     if ($numeroArray % 2 == 0) {
-        $arrayPar_push($numeroArray);
+        array_push($arrayPar, $numeroArray);
         $contador++;
     }else if ($numeroArray % 2 != 0){
-        $arrayImpar_push($numeroArray);
+        array_push($arrayImpar, $numeroArray);
         $contador++;
     }    
 };
@@ -23,8 +23,6 @@ $valor2 = null;
 while($contador <= count($arrayPar)) {
     if($arrayPar[$contador] > $valor1){
         $valor1 = $arrayPar[$contador];
-    }else if ($arrayPar[$contador] > $valor1){
-        $valor2 = $arrayPar[$contador];
     }else{
         if($arrayPar[$contador] > $valor2) {
             $valor2 = $arrayPar[$contador];
@@ -38,16 +36,15 @@ $valorI1 = 0;
 $valorI2 = null;
 
 while($contador <= count($arrayImpar)) {
-    if($arrayImpar[$contador] > $valor1){
-        $valor1 = $arrayimpar[$contador];
-    }else if ($arrayImpar[$contador] > $valor1){
-        $valor2 = $arrayImpar[$contador];
+    if($arrayImpar[$contador] > $valorI1){
+        $valorI1 = $arrayImpar[$contador];
     }else{
-        if($arrayimpar[$contador] > $valor2) {
-            $valor2 = $arrayImpar[$contador];
+        if($arrayImpar[$contador] > $valorI2) {
+            $valorI2 = $arrayImpar[$contador];
         }
     }
     $contador++;
 };
 
-echo ($valor1.$valor2);
+echo ("O maior valor Par do Array: ".$valor1." O segundo maior valor Par do Array: ".$valor2).PHP_EOL;
+echo ("O maior valor Impar do Array: ".$valorI1." O segundo maior valor Impar do Array: ".$valorI2);
