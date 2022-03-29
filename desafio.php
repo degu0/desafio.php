@@ -5,8 +5,8 @@ $array = [6, 30, 88, 79, 90, 35, 75, 84, 77, 32, 2, 90, 84, 90, 92, 34, 76, 4, 7
 $arrayPar = [];
 $arrayImpar = [];
 
-//Divisão dos valores do array principal para os outros arrays. arrayPar com valores pares do array principal e arrayImpar com valores impares do array principal 
 $contador = 0;
+//while de divisão dos valores do array principal para os outros arrays. arrayPar com valores pares do array principal e arrayImpar com valores impares do array principal 
 while ($contador < 21){
     $numeroArray = $array[$contador];
     if ($numeroArray % 2 == 0) {
