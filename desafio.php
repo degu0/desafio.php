@@ -1,9 +1,11 @@
 <?php
-
+//array da questão
 $array = [6, 30, 88, 79, 90, 35, 75, 84, 77, 32, 2, 90, 84, 90, 92, 34, 76, 4, 78, 73, 41];
+//Criando duas listas para divasão da array principal, em pares e impares
 $arrayPar = [];
 $arrayImpar = [];
 
+//Divisão dos valores do array principal para os outros arrays. arrayPar com valores pares do array principal e arrayImpar com valores impares do array principal 
 $contador = 0;
 while ($contador < 21){
     $numeroArray = $array[$contador];
@@ -16,10 +18,11 @@ while ($contador < 21){
     }    
 };
 
+
 $contador = 0;
 $valor1 = 0;
 $valor2 = null;
-
+//while para comparar e armazenar os dois maiores valores do arrayPar 
 while($contador <= count($arrayPar)) {
     if($arrayPar[$contador] > $valor1){
         $valor1 = $arrayPar[$contador];
@@ -34,7 +37,7 @@ while($contador <= count($arrayPar)) {
 $contador = 0;
 $valorI1 = 0;
 $valorI2 = null;
-
+//while para comparar e armazenar os dois maiores valores do arrayImpar
 while($contador <= count($arrayImpar)) {
     if($arrayImpar[$contador] > $valorI1){
         $valorI1 = $arrayImpar[$contador];
